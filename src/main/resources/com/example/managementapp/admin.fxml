@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.managementapp.AdminController">
+    <Button fx:id="informationButton" style="-fx-background-color: green;" text="Fetch and Display Information" />
+   <Button fx:id="deleteUserButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: green;" text="DELETE USER" />
+    <TableView fx:id="dataTableView" style="-fx-background-color: yellow;">
+        <columns>
+            <TableColumn fx:id="usernameColumn" text="Username" />
+            <TableColumn fx:id="firstNameColumn" text="First Name" />
+            <TableColumn fx:id="lastNameColumn" text="Last Name" />
+            <TableColumn fx:id="emailColumn" text="Email" />
+            <TableColumn fx:id="addressColumn" text="Address" />
+            <TableColumn fx:id="nidColumn" text="NID" />
+            <TableColumn fx:id="nationalityColumn" text="Nationality" />
+            <TableColumn fx:id="occupationColumn" text="Occupation" />
+            <TableColumn fx:id="creditorColumn" text="Creditor" />
+            <TableColumn fx:id="balanceColumn" text="Balance" />
+        </columns>
+    </TableView>
+</VBox>

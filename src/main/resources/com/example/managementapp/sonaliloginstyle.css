@@ -1,0 +1,125 @@
+/* Overall Root Styling */
+.root {
+    -fx-background-color: #f0f4f7; /* Light background color for modern look */
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+/* Background Image Styling */
+#backgroundImage {
+    -fx-fit-width: 100%;
+    -fx-fit-height: 100%;
+    -fx-preserve-ratio: false;
+}
+
+/* Frosted Glass Effect */
+.vbox {
+    -fx-background-color: rgba(255, 255, 255, 0.85); /* Slightly more opaque for the form */
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0.5, 0, 0); /* subtle shadow */
+}
+
+/* ChoiceBox (Login Type Selection) */
+.choice-box {
+    -fx-font-size: 16px;
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #555;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 30px;
+    -fx-padding: 10px 15px;
+}
+
+/* Text Fields (Username & Password) */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #555;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 30px;
+    -fx-padding: 12px 15px;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.5, 0, 0);
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50; /* Highlight on focus */
+    -fx-effect: dropshadow(gaussian, rgba(76, 175, 80, 0.5), 5, 0.5, 0, 0);
+}
+
+/* Button Styling */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 30px;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2px;
+    -fx-font-weight: bold;
+    -fx-transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+    -fx-transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #388e3c; /* Darker green on press */
+}
+
+/* Sign Up Button Styling */
+#sign_upmenu {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4CAF50;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: #4CAF50;
+    -fx-border-width: 2px;
+    -fx-background-radius: 30px;
+    -fx-padding: 10px 20px;
+    -fx-transition: background-color 0.3s ease-in-out;
+}
+
+#sign_upmenu:hover {
+    -fx-background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Label Styling */
+.label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 5px;
+    -fx-alignment: center;
+}
+
+/* Message Label (Error/Success Text) */
+.error-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+/* Image Styling (Login Image) */
+#loginImage {
+    -fx-fit-height: 300px;
+    -fx-fit-width: 250px;
+    -fx-preserve-ratio: true;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 1, 0, 0);
+}
+
+/* Animation on Page Load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.vbox {
+    animation: fadeIn 1s ease-out;
+}

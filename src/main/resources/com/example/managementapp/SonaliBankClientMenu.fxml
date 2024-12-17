@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@SonaliBankClientMenu.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.managementapp.SonaliBankClientMenuConroller">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <!-- Sidebar -->
+         <VBox id="sidebar" fx:id="sidebar" prefWidth="200.0">
+            <children>
+               <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../LaterOn.jpg" />
+                  </image>
+               </ImageView>
+               <Text fill="#9a3939" strokeType="OUTSIDE" strokeWidth="0.0" text="SonaliBank" />
+               <Button id="dashboardButton" fx:id="dashboard_btn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Dashboard" VBox.vgrow="ALWAYS">
+                  <graphic>
+                     <FontAwesomeIcon glyphName="HOME" size="20" />
+                  </graphic>
+               </Button>
+               <Button id="transactionsButton" fx:id="transaction_btn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onAction="#showTransactionControls" text="Transactions" VBox.vgrow="ALWAYS">
+                  <graphic>
+                     <FontAwesomeIcon glyphName="EXCHANGE" size="20" />
+                  </graphic>
+               </Button>
+               <Button id="accountsButton" fx:id="accounts_btn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Accounts" VBox.vgrow="ALWAYS">
+                  <graphic>
+                     <FontAwesomeIcon glyphName="MALE" size="20" />
+                  </graphic>
+               </Button>
+               <Line endX="120.0" />
+               <Button id="profileButton" fx:id="profile_btn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="Profile" VBox.vgrow="ALWAYS">
+                  <graphic>
+                     <FontAwesomeIcon glyphName="GENDERLESS" size="20" />
+                  </graphic>
+               </Button>
+               <Button id="logoutButton" fx:id="logout_btn" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" text="LogOut" VBox.vgrow="ALWAYS">
+                  <graphic>
+                     <FontAwesomeIcon glyphName="SIGN_OUT" size="20" />
+                  </graphic>
+               </Button>
+            </children>
+         </VBox>
+         <!-- Main Content -->
+         <AnchorPane id="mainContent" fx:id="mainContent" HBox.hgrow="ALWAYS">
+            <children>
+               <Label text="Main Content Area" />
+               <!-- Transaction Controls -->
+               <VBox fx:id="transactionControls" layoutX="20.0" layoutY="20.0" spacing="10.0" visible="false">
+                  <Label text="Account Balance:" />
+                  <Label fx:id="balanceLabel" text="0.0" />
+                  <TextField fx:id="amountField" promptText="Enter amount" />
+                  <Button onAction="#handleCredit" text="Credit" />
+                  <Button onAction="#handleDebit" text="Debit" />
+                  <Label fx:id="messageLabel" text="" />
+               </VBox>
+            </children>
+         </AnchorPane>
+      </HBox>
+   </children>
+</AnchorPane>

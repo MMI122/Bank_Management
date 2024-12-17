@@ -1,0 +1,9 @@
+opencv-python
+opencv-contrib-python
+face_recognition
+mysql-connector-python
+py4j
+pyautogui
+numpy
+pandas
+tkinter

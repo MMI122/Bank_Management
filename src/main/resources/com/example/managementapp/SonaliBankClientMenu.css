@@ -1,0 +1,131 @@
+/*!* SonaliBankClientMenu.css *! #sidebar { -fx-background-color: linear-gradient(to bottom, #2C3E50, #4A6070); -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1); } #mainContent { -fx-background-color: linear-gradient(to bottom, #ECF0F1, #BDC3C7); -fx-padding: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1); } Button { -fx-background-color: linear-gradient(to bottom, #34495E, #2C3E50); -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-border-radius: 5; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1); -fx-cursor: hand; -fx-transition: all 0.3s ease; } Button:hover { -fx-background-color: linear-gradient(to bottom, #3B5998, #34495E); -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 1); } Button:pressed { -fx-background-color: linear-gradient(to bottom, #2C3E50, #34495E); -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1); } Label { -fx-text-fill: #2C3E50; -fx-font-size: 16px; -fx-font-weight: bold; } Text { -fx-fill: #9a3939; -fx-font-size: 24px; -fx-font-weight: bold; } ImageView { -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1); }*/
+/* SonaliBankClientMenu.css
+.root {
+    -fx-font-family: 'Arial';
+    -fx-background-color: linear-gradient(to bottom, #ECF0F1, #BDC3C7);
+}
+
+VBox {
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1);
+    -fx-animation: fadeIn 1s ease-in-out;
+}
+
+Label {
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+TextField, PasswordField {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #2C3E50;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+TextField:focused, PasswordField:focused {
+    -fx-border-color: #3B5998;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1);
+}
+
+Button {
+    -fx-background-color: linear-gradient(to bottom, #34495E, #2C3E50);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+Button:hover {
+    -fx-background-color: linear-gradient(to bottom, #3B5998, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 1);
+}
+
+Button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #2C3E50, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Advanced Features
+TextField, PasswordField {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #F0F0F0);
+    -fx-border-color: #2C3E50;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+TextField:focused, PasswordField:focused {
+    -fx-border-color: #3B5998;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1);
+    -fx-background-color: linear-gradient(to bottom, #F0F0F0, #FFFFFF);
+}
+
+Button {
+    -fx-background-color: linear-gradient(to bottom, #34495E, #2C3E50);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+Button:hover {
+    -fx-background-color: linear-gradient(to bottom, #3B5998, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 1);
+}
+
+Button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #2C3E50, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+*/
+#sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2C3E50, #4A6070);
+    -fx-padding: 10;
+}
+
+#mainContent {
+    -fx-background-color: linear-gradient(to bottom, #ECF0F1, #BDC3C7);
+    -fx-padding: 10;
+}
+
+Button {
+    -fx-background-color: linear-gradient(to bottom, #34495E, #2C3E50);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+Button:hover {
+    -fx-background-color: linear-gradient(to bottom, #3B5998, #34495E);
+}
+

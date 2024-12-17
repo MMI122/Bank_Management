@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.managementapp.LoggedInController">
+   <Label fx:id="label_welcome" layoutX="231.0" layoutY="48.0" prefHeight="35.0" prefWidth="120.0" text="Welcome!" textFill="GREEN">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+   <Label fx:id="label_fav_channel" layoutX="161.0" layoutY="14.0" text="Why are you here Hehe?" textFill="ORANGE">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+   <Button fx:id="button_logout" layoutX="501.0" layoutY="346.0" mnemonicParsing="false" style="-fx-background-color: yellow;" text="Logout">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Button>
+   <Button fx:id="Sonali_Bank" layoutX="30.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToSonaliBank" text="SonaliBank" />
+   <Button layoutX="177.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchToRupaliBank" text="RupaliBank" />
+   <Button layoutX="313.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchToJanataBank" text="JanataBank" />
+   <Button layoutX="459.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchToDBBLBank" text="DBBL" />
+   <ImageView fitHeight="150.0" fitWidth="120.0" layoutX="14.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../SonaliBank.jpg" />
+   </ImageView>
+   <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="152.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../RupaliBank.jpg" />
+   </ImageView>
+   <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="291.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../JanataBank.jpg" />
+   </ImageView>
+   <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="421.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../DBBL.jpg" />
+   </ImageView>
+</AnchorPane>

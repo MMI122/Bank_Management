@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" spacing="20" style="-fx-background-color: black;" stylesheets="@sonaliloginstyle.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.managementapp.JanataBankLogin">
+    <children>
+        <!-- Image Section -->
+        <ImageView fx:id="loginImage" fitHeight="457.0" fitWidth="231.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image></ImageView>
+
+        <!-- Form Section -->
+        <VBox alignment="CENTER" spacing="15" style="-fx-background-color: black;">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Login" />
+
+            <!-- ChoiceBox for Admin/Client Login -->
+            <ChoiceBox fx:id="loginChoiceBox" style="-fx-background-color: blue;">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Admin" />
+                        <String fx:value="Client" />
+                    </FXCollections>
+                </items>
+                <value>Client</value>
+            </ChoiceBox>
+
+            <TextField fx:id="username_profile" promptText="Username" style="-fx-background-color: grey;" />
+            <PasswordField fx:id="password_profile" promptText="Password" style="-fx-background-color: grey;" />
+            <Button fx:id="login_profile" onAction="#handleLogin" text="Login" />
+            <Button fx:id="sign_upmenu" mnemonicParsing="false" text="Sign Up" />
+
+            <Label fx:id="messageLabel" style="-fx-text-fill: red;" />
+        </VBox>
+    </children>
+</HBox>
